@@ -31,4 +31,5 @@ def open_login_page(browser):
 @then("user finds sign in heading")
 def find_sign_in_heading(browser):
     """Find sign in heading on a log in page."""
-    LoginPage(browser).find_login_heading()
+    sign_in_heading = LoginPage(browser).find_login_heading()
+    assert sign_in_heading.text == "Вход в систему"
